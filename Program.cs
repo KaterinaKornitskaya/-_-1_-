@@ -229,7 +229,7 @@ namespace task_7
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static void Main7(string[] args)
         {
             Console.WriteLine("Enter start: ");
             int start = Convert.ToInt32(Console.ReadLine());
@@ -265,6 +265,67 @@ namespace task_7
             Console.WriteLine();
         }
        
+    }
+}
+
+
+namespace task_8
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter a number");                  // вывод в консоль сообщения
+            int number = Convert.ToInt32(Console.ReadLine());     // ввод числа, конвертируем в инт
+
+            Console.WriteLine("Enter a number 1 to replace: ");   // вывод в консоль сообщения
+            int r1 = Convert.ToInt32(Console.ReadLine());         // цифра для замены 1
+            Console.WriteLine("Enter a number 2 to replace: ");   // вывод в консоль сообщения
+            int r2 = Convert.ToInt32(Console.ReadLine());         // цифра для замены 1
+
+            int n1, n2, n3, n4, n5, n6;
+            n6 = number - ((number / 10) * 10);
+            n5 = (number / 10) - ((number / 100) * 10);
+            n4 = (number / 100) - ((number / 1000) * 10);
+            n3 = (number / 1000) - ((number / 10000) * 10);
+            n2 = (number / 10000) - ((number / 100000) * 10);
+            n1 = number / 100000;
+
+            int[] arr = {n1, n2, n3 , n4, n5, n6};
+            int i = 0;
+            int num = 0;
+            for (i = 0; i < 6; i++)
+            {
+
+
+                int temp = arr[r1 - 1];
+                int temp3 = arr[r2 - 1];
+                arr[r1 - 1] = temp3;
+                arr[r2 - 1] = temp;
+                Console.Write(arr[i]);
+
+                num
+                    = (arr[0]*100000)+(arr[1]*10000)+(arr[2]*1000)+(arr[3]*100)+(arr[4]*10)+(arr[5]);
+               // Console.WriteLine(num);
+                
+            }
+            num = Convert.ToInt32(num);
+           // Console.WriteLine(num);
+            //Console.WriteLine(arr[i]);
+
+            //StringBuilder str = new StringBuilder().Append(number);  // число как string 
+            //
+            ///char temp1 = str[r1-1];  // временная переменная для замены1
+            ///char temp2 = str[r2-1];  // временная переменная для замены1
+            ///
+            ///str[r1-1] = temp2;  // замена местами символов
+            ///str[r2-1] = temp1;  // замена местами символов
+            //
+            //string st = str.ToString();    // конвертируем в стринг
+            //number = Convert.ToInt32(st);  // результат конвертирует в int
+            //Console.WriteLine();
+            //Console.WriteLine(number);
+        }
     }
 }
 
