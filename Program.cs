@@ -277,7 +277,7 @@ namespace task_8
         {
             Console.WriteLine("Enter a number");                  // вывод в консоль сообщения
             int number = Convert.ToInt32(Console.ReadLine());     // ввод числа, конвертируем в инт
-
+           
             Console.WriteLine("Enter a number 1 to replace: ");   // вывод в консоль сообщения
             int r1 = Convert.ToInt32(Console.ReadLine());         // цифра для замены 1
             Console.WriteLine("Enter a number 2 to replace: ");   // вывод в консоль сообщения
